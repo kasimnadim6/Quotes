@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -24,24 +25,25 @@ body {
 
 .btn {
   text-decoration: none;
-  background-color: teal;
+  background-color: #430969;
   color: white;
   border-radius: 4px;
   padding: 0.75rem 1.5rem;
-  border: 1px solid teal;
+  border: 1px solid #9f5ccc;
   cursor: pointer;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #11acac;
-  border-color: #11acac;
+  background-color: #c291e2;
+  border-color: #430969;
+  color: #38015c;
 }
 
 .btn--flat {
   cursor: pointer;
   font: inherit;
-  color: teal;
+  color: 430969;
   border: none;
   background-color: none;
   text-decoration: none;
@@ -51,6 +53,6 @@ body {
 
 .btn--flat:hover,
 .btn--flat:active {
-  background-color: teal;
-  color: white;
+  background-color: #c291e2;
+  color: #38015c;
 }

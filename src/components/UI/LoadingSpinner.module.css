@@ -5,13 +5,13 @@
 }
 .spinner:after {
   content: ' ';
-  display: block;
-  width: 64px;
-  height: 64px;
+  display: flex;
+  width: 38px;
+  height: 38px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid teal;
-  border-color: teal transparent teal transparent;
+  border: 3px solid #38015c;
+  border-color: #38015c transparent #38015c transparent;
   animation: spinner 1.2s linear infinite;
 }
 @keyframes spinner {

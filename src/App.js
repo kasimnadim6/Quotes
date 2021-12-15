@@ -4,6 +4,7 @@ import Layout from './components/layout/Layout';
 import LoadingSpinner from './components/UI/LoadingSpinner';
 
 function App() {
+  const AuthForm = React.lazy(() => import('./components/Auth/AuthForm'));
   const AllQuotes = React.lazy(() => import('./components/layout/AllQuotes'));
   const NewQuote = React.lazy(() => import('./components/layout/NewQuote'));
   const QuoteDetails = React.lazy(() =>
@@ -21,6 +22,7 @@ function App() {
         }
       >
         <Routes>
+          <Route path="/auth" element={<AuthForm />} />
           <Route path="/" element={<Navigate to="quotes" />} />
           <Route path="/quotes/" element={<AllQuotes />} exact />
           <Route path="/quotes/:quoteId/*" element={<QuoteDetails />} />

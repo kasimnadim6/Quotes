@@ -6,7 +6,7 @@
   align-items: flex-end;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  background-color: #c2e7f0;
+  background-color: #dcdcdc;
 }
 
 .item:last-of-type {
@@ -22,7 +22,7 @@
 .item blockquote {
   margin: 0;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #212929;
 }
 

@@ -1,16 +1,19 @@
 .header {
   width: 100%;
   height: 5rem;
+  background-color: #38015c;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   display: flex;
-  padding: 0 10%;
   justify-content: space-between;
   align-items: center;
-  background-color: #008080;
+  padding: 0 10%;
 }
 
 .logo {
+  font-family: 'Lato', sans-serif;
   font-size: 2rem;
   color: white;
+  margin: 0;
 }
 
 .nav ul {
@@ -21,17 +24,39 @@
 }
 
 .nav li {
-  margin-left: 1.5rem;
+  margin-left: 1.2rem;
   font-size: 1.25rem;
 }
 
-.nav a {
+.header a {
   text-decoration: none;
-  color: #88dfdf;
+  color: white;
+  font-weight: 300;
+  transition: all 1s;
+}
+
+.header a:hover {
+  color: #c291e2;
 }
 
 .nav a:hover,
 .nav a:active,
 .nav a.active {
-  color: #e6fcfc;
+  color: #c291e2;
+  font-weight: bold;
+}
+.header button {
+  font: inherit;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header button:hover {
+  background-color: #c291e2;
+  color: #38015c;
 }
