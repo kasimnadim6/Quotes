@@ -25,7 +25,7 @@ const MainNavigation = () => {
             </NavLink>
           </li>
           <li>
-            <Link to="/auth">Login</Link>
+            <button>Login</button>
           </li>
           <li>
             <button>Logout</button>
