@@ -17,7 +17,7 @@ const QuoteDetails = () => {
   } = useHttp(getSingleQuote, true);
   useEffect(() => {
     invoke(quoteId);
-  }, [invoke]);
+  }, [invoke, quoteId]);
   if (status === 'pending') {
     return (
       <div className="centered">

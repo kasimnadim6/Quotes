@@ -12,6 +12,7 @@ const QuoteForm = (props) => {
   const onFocusHandler = () => setIsEntering(true);
   const clickHandler = () => setIsEntering(false);
   function submitFormHandler(event) {
+    console.log(isEntering);
     event.preventDefault();
     const enteredAuthor = authorInputRef.current.value;
     const enteredText = textInputRef.current.value;
