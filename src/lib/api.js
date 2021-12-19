@@ -1,5 +1,7 @@
 const FIREBASE_DOMAIN =
   'https://reactrouting-895b6-default-rtdb.firebaseio.com';
+const FIREBASE_AUTH = 'https://identitytoolkit.googleapis.com/v1/accounts:';
+const API_KEY = 'AIzaSyCGi8ZWiBOPtMBXrdy5JBOKqEl4f7N56Xo';
 
 export async function getAllQuotes() {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`);
@@ -97,4 +99,40 @@ export async function getAllComments(quoteId) {
   }
 
   return transformedComments;
+}
+export async function signUp(user) {
+  const response = await fetch(`${FIREBASE_AUTH}signUp?key=${API_KEY}`, {
+    method: 'POST',
+    body: JSON.stringify(user),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(
+      data?.error?.message ||
+        'Unable to sign up at this moment. Try again later'
+    );
+  }
+  return data;
+}
+export async function signIn(user) {
+  const response = await fetch(
+    `${FIREBASE_AUTH}signInWithPassword?key=${API_KEY}`,
+    {
+      method: 'POST',
+      body: JSON.stringify(user),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }
+  );
+  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(
+      data?.error?.message ||
+        'Unable to sign in at this moment. Try again later'
+    );
+  }
 }
